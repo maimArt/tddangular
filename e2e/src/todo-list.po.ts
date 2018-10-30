@@ -14,4 +14,8 @@ export class TodoListPO {
   isTodoListShown(): Promise<boolean> {
     return element(by.css('todo-list ul')).isPresent();
   }
+
+  getTodoTexts(): Promise<string[]> {
+    return element.all(by.css('todo-list ul li')).map(listItem => listItem.getText());
+  }
 }

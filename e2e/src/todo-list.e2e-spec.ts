@@ -1,16 +1,16 @@
 import { TodoListPO } from './todo-list.po';
-import { MockServer} from '../mock/mock-server'
+import { MockServer } from '../mock/mock-server'
 
 describe('TodoList', () => {
   const todoList: TodoListPO = new TodoListPO();
   const mockServer: MockServer = new MockServer(true);
 
-  beforeEach(async() => {
+  beforeEach(async () => {
     await mockServer.start();
     todoList.navigateTo();
   });
 
-  afterEach( async () => {
+  afterEach(async () => {
     await mockServer.stop();
   });
 
@@ -22,7 +22,7 @@ describe('TodoList', () => {
     expect(todoList.isTodoListShown()).toBe(true);
   });
 
-  xit('should display TODOs of the backend', function () {
-
+  it('should display TODOs of the backend', function () {
+    expect(todoList.getTodoTexts()).toEqual(['Make coffee', 'Start coding', 'Make some coffee again'])
   });
 });
