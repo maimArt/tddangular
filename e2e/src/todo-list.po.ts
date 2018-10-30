@@ -10,4 +10,8 @@ export class TodoListPO {
   getHeaderText(): Promise<string> {
     return element(by.css('todo-list h1')).getText();
   }
+
+  isTodoListShown(): Promise<boolean> {
+    return element(by.css('todo-list ul')).isPresent();
+  }
 }

@@ -18,8 +18,8 @@ describe('TodoList', () => {
     expect(todoList.getHeaderText()).toEqual('TODOs');
   });
 
-  xit('should display a list of TODOs', function () {
-    
+  it('should display a list of TODOs', function () {
+    expect(todoList.isTodoListShown()).toBe(true);
   });
 
   xit('should display TODOs of the backend', function () {
