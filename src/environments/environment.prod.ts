@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  todosUrl: 'http://localhost:9000/todos'
 };

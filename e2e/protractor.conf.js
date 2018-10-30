@@ -4,12 +4,19 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
+  plugins: [{
+    package: 'protractor-console',
+    logLevels: ['severe','warning']
+  }],
   allScriptsTimeout: 11000,
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    'chromeOptions': {
+      args: ['--headless']
+    }
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
