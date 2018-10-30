@@ -14,8 +14,8 @@ describe('TodoList', () => {
     await mockServer.stop();
   });
 
-  xit('should display a header "TODOs"', () => {
-    
+  it('should display a header "TODOs"', () => {
+    expect(todoList.getHeaderText()).toEqual('TODOs');
   });
 
   xit('should display a list of TODOs', function () {
