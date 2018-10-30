@@ -27,4 +27,9 @@ describe('TodoListComponent', () => {
     const headerElement: HTMLHeadElement = fixture.nativeElement.querySelector('h1');
     expect(headerElement.textContent).toEqual('TODOs')
   });
+
+  it('should display a todo list', function () {
+    const todoListElement: HTMLUListElement = fixture.nativeElement.querySelector('ul');
+    expect(todoListElement).toBeTruthy();
+  });
 });
