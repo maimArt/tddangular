@@ -14,6 +14,15 @@ describe('TodoList', () => {
     await mockServer.stop();
   });
 
-  it('should do something', () => {
+  xit('should display a header "TODOs"', () => {
+    
+  });
+
+  xit('should display a list of TODOs', function () {
+    
+  });
+
+  xit('should display TODOs of the backend', function () {
+
   });
 });
