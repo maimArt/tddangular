@@ -3,7 +3,7 @@ import { MockServer } from '../mock/mock-server'
 
 describe('TodoList', () => {
   const todoList: TodoListPO = new TodoListPO();
-  const mockServer: MockServer = new MockServer(true);
+  const mockServer: MockServer = new MockServer();
 
   beforeEach(async () => {
     await mockServer.start();

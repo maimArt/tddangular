@@ -1,2 +1,4 @@
 <h1>TODOs</h1>
-<ul></ul>
+<ul>
+  <li *ngFor="let todo of todos$ | async">{{todo.text}}</li>
+</ul>
